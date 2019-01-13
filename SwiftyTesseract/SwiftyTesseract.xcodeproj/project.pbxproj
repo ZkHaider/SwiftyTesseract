@@ -115,9 +115,9 @@
 		6255DBB22159CEF400A52189 /* libtiffxx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6255DB412159CEF400A52189 /* libtiffxx.a */; };
 		6255DBB32159CEF400A52189 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6255DB422159CEF400A52189 /* libjpeg.a */; };
 		6255DBB42159CEF400A52189 /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6255DB432159CEF400A52189 /* liblept.a */; };
-		62715F2421EAF26B001C416E /* 1960.png in Resources */ = {isa = PBXBuildFile; fileRef = 62715F2321EAF26B001C416E /* 1960.png */; };
-		62715F2621EAF272001C416E /* 1948.png in Resources */ = {isa = PBXBuildFile; fileRef = 62715F2521EAF272001C416E /* 1948.png */; };
-		62715F2821EAF277001C416E /* 1923.png in Resources */ = {isa = PBXBuildFile; fileRef = 62715F2721EAF277001C416E /* 1923.png */; };
+		62715F2C21EAFE62001C416E /* 1923.png in Resources */ = {isa = PBXBuildFile; fileRef = 62715F2921EAFE62001C416E /* 1923.png */; };
+		62715F2D21EAFE62001C416E /* 1948.png in Resources */ = {isa = PBXBuildFile; fileRef = 62715F2A21EAFE62001C416E /* 1948.png */; };
+		62715F2E21EAFE62001C416E /* 1960.png in Resources */ = {isa = PBXBuildFile; fileRef = 62715F2B21EAFE62001C416E /* 1960.png */; };
 		6271A3DE2047A0D7005DB23B /* SwiftyTesseract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6271A3D42047A0D7005DB23B /* SwiftyTesseract.framework */; };
 		6271A3E32047A0D7005DB23B /* SwiftyTesseractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6271A3E22047A0D7005DB23B /* SwiftyTesseractTests.swift */; };
 		6271A3E52047A0D7005DB23B /* SwiftyTesseract.h in Headers */ = {isa = PBXBuildFile; fileRef = 6271A3D72047A0D7005DB23B /* SwiftyTesseract.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -259,9 +259,9 @@
 		6255DB422159CEF400A52189 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
 		6255DB432159CEF400A52189 /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblept.a; sourceTree = "<group>"; };
 		6255DBB52159CF3D00A52189 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		62715F2321EAF26B001C416E /* 1960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1960.png; path = ../../../../Downloads/1960.png; sourceTree = "<group>"; };
-		62715F2521EAF272001C416E /* 1948.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1948.png; path = ../../../../Downloads/1948.png; sourceTree = "<group>"; };
-		62715F2721EAF277001C416E /* 1923.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1923.png; path = ../../../../Downloads/1923.png; sourceTree = "<group>"; };
+		62715F2921EAFE62001C416E /* 1923.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1923.png; sourceTree = "<group>"; };
+		62715F2A21EAFE62001C416E /* 1948.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1948.png; sourceTree = "<group>"; };
+		62715F2B21EAFE62001C416E /* 1960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1960.png; sourceTree = "<group>"; };
 		6271A3D42047A0D7005DB23B /* SwiftyTesseract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyTesseract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6271A3D72047A0D7005DB23B /* SwiftyTesseract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyTesseract.h; sourceTree = "<group>"; };
 		6271A3D82047A0D7005DB23B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -505,10 +505,10 @@
 			children = (
 				629F558B204B3B3B00974B07 /* tessdata */,
 				62E3D1D0204879EE0030AB11 /* image_sample.jpg */,
+				62715F2921EAFE62001C416E /* 1923.png */,
+				62715F2A21EAFE62001C416E /* 1948.png */,
+				62715F2B21EAFE62001C416E /* 1960.png */,
 				62E2B8AD2097B75800147083 /* MVRCode3.png */,
-				62715F2321EAF26B001C416E /* 1960.png */,
-				62715F2521EAF272001C416E /* 1948.png */,
-				62715F2721EAF277001C416E /* 1923.png */,
 				62E2B8B12097C7C300147083 /* Lenore3.png */,
 				62E3D1E12049FAAE0030AB11 /* IMG_1108.jpg */,
 				6271A3E22047A0D7005DB23B /* SwiftyTesseractTests.swift */,
@@ -750,12 +750,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62715F2621EAF272001C416E /* 1948.png in Resources */,
+				62715F2D21EAFE62001C416E /* 1948.png in Resources */,
+				62715F2C21EAFE62001C416E /* 1923.png in Resources */,
 				62E3D1D2204880400030AB11 /* image_sample.jpg in Resources */,
-				62715F2821EAF277001C416E /* 1923.png in Resources */,
+				62715F2E21EAFE62001C416E /* 1960.png in Resources */,
 				62E3D1E22049FAAE0030AB11 /* IMG_1108.jpg in Resources */,
 				62E2B8B22097C7C300147083 /* Lenore3.png in Resources */,
-				62715F2421EAF26B001C416E /* 1960.png in Resources */,
 				629F558C204B3B3B00974B07 /* tessdata in Resources */,
 				62E2B8AE2097B75800147083 /* MVRCode3.png in Resources */,
 			);
