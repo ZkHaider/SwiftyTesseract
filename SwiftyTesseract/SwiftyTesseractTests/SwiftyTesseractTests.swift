@@ -91,6 +91,45 @@ class SwiftyTesseractTests: XCTestCase {
 
   }
   
+  func testRealImage_returns1960() {
+    swiftyTesseract = SwiftyTesseract(languages: [.english, .german], bundle: bundle)
+    guard let image = UIImage(named: "1960.png", in: Bundle(for: self.classForCoder), compatibleWith: nil) else { fatalError() }
+    
+    swiftyTesseract.performOCR(on: image) { string in
+      guard let string = string else {
+        XCTFail("String is nil")
+        return
+      }
+      XCTAssertEqual("1960", string.trimmingCharacters(in: .whitespacesAndNewlines))
+    }
+  }
+  
+  func testRealImage_returns1948() {
+    swiftyTesseract = SwiftyTesseract(languages: [.english, .german], bundle: bundle)
+    guard let image = UIImage(named: "1948.png", in: Bundle(for: self.classForCoder), compatibleWith: nil) else { fatalError() }
+    
+    swiftyTesseract.performOCR(on: image) { string in
+      guard let string = string else {
+        XCTFail("String is nil")
+        return
+      }
+      XCTAssertEqual("1948", string.trimmingCharacters(in: .whitespacesAndNewlines))
+    }
+  }
+  
+  func testRealImage_returns1923() {
+    swiftyTesseract = SwiftyTesseract(languages: [.english, .german], bundle: bundle)
+    guard let image = UIImage(named: "1923.png", in: Bundle(for: self.classForCoder), compatibleWith: nil) else { fatalError() }
+    
+    swiftyTesseract.performOCR(on: image) { string in
+      guard let string = string else {
+        XCTFail("String is nil")
+        return
+      }
+      XCTAssertEqual("1923", string.trimmingCharacters(in: .whitespacesAndNewlines))
+    }
+  }
+  
   func testMultipleLanguages() {
     swiftyTesseract = SwiftyTesseract(languages: [.english, .french], bundle: bundle, engineMode: .tesseractOnly)
     let answer = """
@@ -119,7 +158,7 @@ class SwiftyTesseractTests: XCTestCase {
   
   func testWithNoImage() {
     let bundle = Bundle(for: self.classForCoder)
-    swiftyTesseract = SwiftyTesseract(language: .english, bundle: bundle, engineMode: .tesseractOnly)
+    swiftyTesseract = SwiftyTesseract(language: .english, bundle: bundle, engineMode: .tesseractLstmCombined)
     let image = UIImage()
     swiftyTesseract.performOCR(on: image) { string in
       XCTAssertNil(string)
@@ -128,7 +167,7 @@ class SwiftyTesseractTests: XCTestCase {
   
   func testWithCustomLanguage() {
     guard let image = UIImage(named: "MVRCode3.png", in: bundle, compatibleWith: nil) else { fatalError() }
-    swiftyTesseract = SwiftyTesseract(language: .custom("OCRB"), bundle: bundle, engineMode: .tesseractOnly)
+    swiftyTesseract = SwiftyTesseract(language: .custom("OCRB"), bundle: bundle, engineMode: .tesseractLstmCombined)
     let answer = """
     P<GRCELLINAS<<GEORGIOS<<<<<<<<<<<<<<<<<<<<<<
     AE00000057GRC6504049M1208283<<<<<<<<<<<<<<00
